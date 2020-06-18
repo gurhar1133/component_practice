@@ -5,11 +5,11 @@
 2) Clone this repo
  
 3) cd into component_practice and enter:
-    $ npm install
+    <code>$ npm install</code>
  
 4) You may need to run these commands if icons arent working
-    $ npm install --save svelte-awesome
-    $ npm i --save @fortawesome/free-regular-svg-icons
+    <code>$ npm install --save svelte-awesome</code>
+    <code>$ npm i --save @fortawesome/free-regular-svg-icons</code>
 
 
 Contact me with any issues you run into.
