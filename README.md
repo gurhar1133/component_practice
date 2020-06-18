@@ -8,7 +8,7 @@
     <code>$ npm install</code>
  
 4) You may need to run these commands if icons arent working
-    <code>$ npm install --save svelte-awesome</code>
+    <code>$ npm install --save svelte-awesome</code> <br>
     <code>$ npm i --save @fortawesome/free-regular-svg-icons</code>
 
 
