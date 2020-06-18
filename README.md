@@ -1,6 +1,6 @@
 ## Instructions:
  
-1) Install tailwind
+1) Make sure you have tailwind installed
  
 2) Clone this repo
  
