@@ -67,7 +67,7 @@
 
   
    
-  4) Dont alter App.svelte. <br><br>
+  4) Dont alter App.svelte. (Other than uncommenting the components) <br><br>
   
   5) Use tailwind. <br><br>
    
