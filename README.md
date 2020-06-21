@@ -11,6 +11,6 @@
     <code>$ npm install --save svelte-awesome</code> <br>
     <code>$ npm i --save @fortawesome/free-regular-svg-icons</code>
 
-(adding more components)
+
 
 Contact me with any issues you run into.
