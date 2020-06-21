@@ -3,8 +3,24 @@
 
   // Icon imports will be needed in your components
   import Icon from 'svelte-awesome';
+  import Overlay from "./Overlay.svelte";
   import { faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons';
   import { beer, refresh, comment, codeFork, camera, ban } from 'svelte-awesome/icons';
+
+  let navItems = [{name: "Home", id: "1"}, {name : "Contact", id : "2"}];
+  let navIcons = [{name : beer, id: "3"}, {name : comment, id : "4"}];
+
+  let overlay1 = false;
+  let overlay2 = false;
+
+  let listItems1 = [{name: "item1"}, {name: "item2" }, {name:"item3" }, {name: "item4"}];
+
+  let listItems2 = [
+                    {name: "item1", secondary:"THis is a test"},
+                    {name: "item2", secondary:"THis is also a test" }, 
+                    {name:"item3", secondary:"THis is another test" }, 
+                    {name: "item4", secondary:"Yet another test"}
+                    ];
 
 </script>
 
@@ -69,11 +85,12 @@
    
   4) Dont alter App.svelte. (Other than uncommenting the components) <br><br>
   
-  5) Use tailwind. <br><br>
+  5) Refer to the comments in App.svelte for futher instruction. <br><br>
+
+  6) Use tailwind. <br><br>
    
-  6) Have fun! <Icon data={beer}/>
+  7) Have fun! <Icon data={beer}/>
    </p>
-  
 </main>
 
 
@@ -206,3 +223,150 @@
         </Card> -->
 
 </section>
+
+
+
+<section>
+
+  <!-- footer nav should be fixed to the bottom of the screen.
+      has an items attribute for a list of string options, as well as a list of icon options
+      Should dispatch the id of the clicked item on click
+      Slot is for content below nav items -->
+  <!-- <Footer on:click={(event)=>{
+    // should be able to forward the id of the clicked object to App.svelte
+    console.log(event.detail);
+  }} items={navItems} color="primary" icons={navIcons}> </Footer> -->
+  
+</section>
+
+<h3>Overlays</h3>
+<section class="grid grid-cols-2 my-2">
+
+  <div class="mx-4 h-64 bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
+ <!-- <Button 
+          btnText="Show Overlay"
+          color="primary"
+          size="xl"
+          elevation="sm"
+          on:click={()=>{overlay1 = !overlay1}}
+        /> 
+
+
+  <Overlay absolute="{true}" 
+        opacity="{.5}" 
+        zIndex="{99}" 
+        value="{overlay1}" 
+         > 
+        
+        </Overlay>
+     <Button 
+          btnText="Hide Overlay"
+          color="primary"
+          size="xl"
+          elevation="sm"
+          on:click={()=>{overlay1 = !overlay1}}
+        />  
+     -->
+        
+</div>
+
+  
+
+<div class="mx-4 h-64 bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
+
+   <!-- <Button 
+          btnText="Show overlay"
+          color="primary"
+          size="xl"
+          elevation="sm"
+          on:click={()=>{overlay2 = !overlay2}}
+        /> 
+ 
+
+  <Overlay absolute="{false}" 
+        opacity="{.2}" 
+        zIndex="{99}" 
+        value="{overlay2}"
+        on:click={()=>{overlay2 = !overlay2}} >
+
+      
+        
+         <Button 
+          btnText="Hide Overlay"
+          color="primary"
+          size="xl"
+          elevation="sm"
+          on:click={()=>{overlay2 = !overlay2}}
+        /> 
+
+        </Overlay> -->
+        
+</div >
+</section>
+
+<h3>Tooltips</h3>
+<section class="my-4 py-4 px-4 mx-4 ">
+
+<!-- 
+
+    Tooltip wraps around content that it is associated with. So give tooltip a
+    default slot.
+
+    Make open on hover the default and open on click set as default to false
+
+-->
+<!-- <Tooltip position="left"
+          openOnClick={true}
+          openOnHover={false}>
+  <span class="mx-12" >left tooltip</span>
+</Tooltip>
+
+<Tooltip position="right">
+  <span class="mx-12" >right tooltip</span>
+</Tooltip>
+
+<Tooltip position="bottom"
+          openOnClick={true}
+          openOnHover={true}>
+  <span class="mx-12" >bottom tooltip</span>
+</Tooltip>
+
+<Tooltip position="top">
+  <span class="mx-12" > top tooltip</span>
+</Tooltip> -->
+
+
+
+
+
+</section>
+
+<h3>Lists</h3>
+<section>
+<!-- Lists:
+	Title: string
+	SingleLine: boolean (true by default)
+	TwoLine: boolean (false by default)
+	ThreeLine: boolean (false by default)
+	Rounded: boolean  (false by default)
+	Shaped: boolean   (false by default)
+	Items: either a list with objects {name: “name1”}...
+		Two line: {name: “name1”, secondary: “secondary1”}...
+		Three line: {name: “name1”, secondary: “secondary1”, ternary: “ternary1”}.... -->
+	
+  <!-- <List title={"List one"}
+        items={listItems1}
+        shaped={true} />
+
+  <List title={"List two"}
+        twoLine={true}
+        items={listItems2}
+        rounded={true} /> -->
+
+
+
+
+</section>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
