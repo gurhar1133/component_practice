@@ -83,7 +83,7 @@
 
   
    
-  4) Dont alter App.svelte. (Other than uncommenting the components) <br><br>
+  4) Dont alter App.svelte. (Other than uncommenting the components and necessary imports for your components) <br><br>
   
   5) Refer to the comments in App.svelte for futher instruction. <br><br>
 
