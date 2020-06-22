@@ -3,7 +3,7 @@
 
   // Icon imports will be needed in your components
   import Icon from 'svelte-awesome';
-  import Overlay from "./Overlay.svelte";
+  
   import { faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons';
   import { beer, refresh, comment, codeFork, camera, ban } from 'svelte-awesome/icons';
 
@@ -257,15 +257,16 @@
         zIndex="{99}" 
         value="{overlay1}" 
          > 
-        
-        </Overlay>
-     <Button 
+         <Button 
           btnText="Hide Overlay"
           color="primary"
           size="xl"
           elevation="sm"
           on:click={()=>{overlay1 = !overlay1}}
         />  
+        
+        </Overlay>
+     
      -->
         
 </div>
@@ -287,7 +288,7 @@
         opacity="{.2}" 
         zIndex="{99}" 
         value="{overlay2}"
-        on:click={()=>{overlay2 = !overlay2}} >
+         >
 
       
         
@@ -342,7 +343,7 @@
 </section>
 
 <h3>Lists</h3>
-<section>
+<section class="my-4 py-4 px-4 mx-4 ">
 <!-- Lists:
 	Title: string
 	SingleLine: boolean (true by default)
@@ -365,6 +366,17 @@
 
 
 
+
+</section>
+
+
+<h3>Texfield</h3>
+<section class="my-4 py-4 px-4 mx-4 ">
+    <!-- A see Vuetify examples for this basic text input -->
+
+    <!-- <Textfield placeHolder="Default text input" />
+    <Textfield placeHolder="Filled" filled={true} />
+    <Textfield placeHolder="Oulined" outlined={true} /> -->
 
 </section>
 
