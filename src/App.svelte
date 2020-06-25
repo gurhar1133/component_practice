@@ -3,9 +3,16 @@
 
   // Icon imports will be needed in your components
   import Icon from 'svelte-awesome';
-  
   import { faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons';
   import { beer, refresh, comment, codeFork, camera, ban } from 'svelte-awesome/icons';
+
+  import Button from './Button.svelte';
+  import Card from "./Card.svelte";
+  import Overlay from "./Overlay.svelte";
+  import Footer from "./Footer.svelte";
+
+  
+
 
   let navItems = [{name: "Home", id: "1"}, {name : "Contact", id : "2"}];
   let navIcons = [{name : beer, id: "3"}, {name : comment, id : "4"}];
@@ -83,7 +90,7 @@
 
   
    
-  4) Dont alter App.svelte. (Other than uncommenting the components and necessary imports for your components) <br><br>
+  4) Dont alter App.svelte. (Other than uncommenting the components) <br><br>
   
   5) Refer to the comments in App.svelte for futher instruction. <br><br>
 
@@ -105,54 +112,56 @@
 <section class="mx-10 my-10 ">
 
 
-<!-- 
+
  <Button 
   btnText="Large Primary"
   color="primary"
   size="xl"
   elevation="sm"
- /> -->
+ />
 
 <!-- Buttons can have different levels of elevation -->
 
- <!-- <Button 
+ <Button 
   btnText="Block Secondary Raised High"
   color="secondary"
   size="block"
   elevation="lg"
- /> -->
+ />
 
  <!--default color should be purple like vuetify buttons
       default size is md-->
 
- <!-- <Button
+ <Button
   btnText="Rounded"
-  rounded={true} /> -->
+  rounded={true} />
 
- <!-- <Button 
+ <Button 
   btnText="Outline"
-  outline={true} /> -->
+  outline={true} />
 
- <!-- <Button 
+ <Button 
   btnText="Text Button"
-  textMode={true} /> -->
+  textMode={true} />
 
 <!-- by default disabled is false. Buttons should be disableable-->
  
- <!-- <Button
+ <Button
   btnText="Disabled"
-  disabled={true} /> -->
+  disabled={true} />
 
 <!-- put an icon in this button. No btnText-->
 
- <!-- <Button fab={true} 
+ <Button fab={true} 
     elevation="lg"
-    iconData={comment}/> -->
+    iconData={comment}/>
 
-    <!-- <Button fab={true} 
+    <Button fab={true} 
     elevation="sm"
     size="lg"
-    iconData={comment}/> -->
+    iconData={comment}/>
+
+   
   
 
 </section>
@@ -163,7 +172,7 @@
 <h3>Cards</h3>
 <section class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto p-10">
  
-<!-- <Card title="Vegeta"
+<Card title="Vegeta"
           subtitle="Prince of Sayans"
           description="Lorem ipsum ....."
           hasImage={true}
@@ -171,9 +180,9 @@
           elevation="lg"
           >
         
-        </Card> -->
+        </Card>
 
-<!-- <Card title="Svelte"
+<Card title="Svelte"
           subtitle="Javascript Framework"
           description="Lorem ipsum ....."
           hasImage={true}
@@ -181,11 +190,11 @@
           elevation="sm"
           >
         
-        </Card> -->
+        </Card>
 
 <!-- nesting Button in Card -->
 
-<!-- <Card title="Card with buttons"
+<Card title="Card with buttons"
           subtitle="No Image"
           >
 
@@ -193,10 +202,10 @@
         elevation="lg"
         iconData={comment}/>
 
-        </Card> -->
+        </Card>
  
  
-  <!-- <Card title="Tailwind"
+  <Card title="Tailwind"
           subtitle="Design"
           description="Lorem ipsum ....."
           hasImage={true}
@@ -205,13 +214,13 @@
           elevation="lg"
           >
         
-        </Card> -->
+        </Card>
 
 
       <!-- Come up with your own bonus card attribute for this one.
       Doesnt have to fit the vuetify design pattern. Could be animation, styling, etc-->  
 
-<!-- <Card title="Bonus"
+<Card title="Bonus"
           subtitle="Your own bonus property"
           description="Lorem ipsum ....."
           hasImage={true}
@@ -220,7 +229,7 @@
           bonus={true}
           >
         
-        </Card> -->
+        </Card>
 
 </section>
 
@@ -232,24 +241,38 @@
       has an items attribute for a list of string options, as well as a list of icon options
       Should dispatch the id of the clicked item on click
       Slot is for content below nav items -->
-  <!-- <Footer on:click={(event)=>{
+
+
+  <Footer on:click={(event)=>{
     // should be able to forward the id of the clicked object to App.svelte
     console.log(event.detail);
-  }} items={navItems} color="primary" icons={navIcons}> </Footer> -->
+  }} items={navItems} color="primary" icons={navIcons}> </Footer>
   
 </section>
 
 <h3>Overlays</h3>
-<section class="grid grid-cols-2 my-2">
-
-  <div class="mx-4 h-64 bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
- <!-- <Button 
-          btnText="Show Overlay"
+<Button 
+          btnText="Show Overlay 1"
           color="primary"
           size="xl"
           elevation="sm"
+          disabled="{overlay1}"
           on:click={()=>{overlay1 = !overlay1}}
         /> 
+
+<Button 
+          btnText="Show overlay 2"
+          color="primary"
+          size="xl"
+          elevation="sm"
+          disabled="{overlay2}"
+          on:click={()=>{overlay2 = !overlay2}}
+        /> 
+<section class="grid grid-cols-2 my-2" >
+
+
+  <div class="mx-4 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
+ 
 
 
   <Overlay absolute="{true}" 
@@ -267,21 +290,15 @@
         
         </Overlay>
      
-     -->
+    
         
 </div>
 
   
 
-<div class="mx-4 h-64 bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
+<div class="mx-4 z-0 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
 
-   <!-- <Button 
-          btnText="Show overlay"
-          color="primary"
-          size="xl"
-          elevation="sm"
-          on:click={()=>{overlay2 = !overlay2}}
-        /> 
+   
  
 
   <Overlay absolute="{false}" 
@@ -300,13 +317,13 @@
           on:click={()=>{overlay2 = !overlay2}}
         /> 
 
-        </Overlay> -->
+        </Overlay>
         
 </div >
 </section>
 
 <h3>Tooltips</h3>
-<section class="my-4 py-4 px-4 mx-4 ">
+<section class="my-4 py-4 px-4 mx-4">
 
 <!-- 
 
