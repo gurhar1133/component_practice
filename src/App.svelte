@@ -323,7 +323,7 @@
 </section>
 
 <h3>Tooltips</h3>
-<section class="my-4 py-4 px-4 mx-4">
+<section class="my-4 py-4 px-4 mx-4 flex">
 
 <!-- 
 
