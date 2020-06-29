@@ -251,12 +251,12 @@
 </section>
 
 <h3>Overlays</h3>
-<Button 
+<!-- <Button 
           btnText="Show Overlay 1"
           color="primary"
           size="xl"
           elevation="sm"
-          disabled="{overlay1}"
+          
           on:click={()=>{overlay1 = !overlay1}}
         /> 
 
@@ -265,20 +265,20 @@
           color="primary"
           size="xl"
           elevation="sm"
-          disabled="{overlay2}"
+          
           on:click={()=>{overlay2 = !overlay2}}
-        /> 
-<section class="grid grid-cols-2 my-2" >
+        />  -->
+<section class="grid grid-cols-2 my-2 overlays" >
 
 
   <div class="mx-4 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
  
 
 
-  <Overlay absolute="{true}" 
+  <!-- <Overlay absolute="{true}" 
         opacity="{.5}" 
         zIndex="{99}" 
-        value="{overlay1}" 
+        bind:value="{overlay1}" 
          > 
          <Button 
           btnText="Hide Overlay"
@@ -289,7 +289,7 @@
         />  
         
         </Overlay>
-     
+      -->
     
         
 </div>
@@ -298,13 +298,13 @@
 
 <div class="mx-4 z-0 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
 
-   
+<!--    
  
 
   <Overlay absolute="{false}" 
         opacity="{.2}" 
         zIndex="{99}" 
-        value="{overlay2}"
+        bind:value="{overlay2}"
          >
 
       
@@ -315,9 +315,19 @@
           size="xl"
           elevation="sm"
           on:click={()=>{overlay2 = !overlay2}}
-        /> 
+          /> 
 
-        </Overlay>
+          <Card title="Svelte"
+                subtitle="Javascript Framework"
+                description="Lorem ipsum ....."
+                hasImage={true}
+                imgSrc="https://i0.wp.com/programmingwithmosh.com/wp-content/uploads/2019/12/1_OJLglSTFZ1PbwpRG0U2xXA.png?ssl=1"
+                elevation="sm"
+                
+            ></Card>
+        
+
+        </Overlay> -->
         
 </div >
 </section>
