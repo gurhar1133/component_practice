@@ -66,6 +66,18 @@
     }
    
   }
+  .tooltips{
+    z-index: -1;
+  }
+  .overlays{
+    z-index: 99;
+  }
+  .lists{
+    z-index: -1;
+  }
+  .textfields{
+    z-index: -1;
+  }
  
   
 </style>
@@ -271,7 +283,7 @@
 <section class="grid grid-cols-2 my-2 overlays" >
 
 
-  <div class="mx-4 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
+  <div class="mx-4 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg overlays">
  
 
 
@@ -296,7 +308,7 @@
 
   
 
-<div class="mx-4 z-0 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg">
+<div class="mx-4 z-0 h-64 relative bg-red-100 border-2 border-gray-700 shadow-md rounded-lg overlays">
 
 <!--    
  
@@ -333,7 +345,7 @@
 </section>
 
 <h3>Tooltips</h3>
-<section class="my-4 py-4 px-4 mx-4 flex">
+<section class="my-4 py-4 px-4 mx-4 flex tooltips">
 
 <!-- 
 
@@ -370,7 +382,7 @@
 </section>
 
 <h3>Lists</h3>
-<section class="my-4 py-4 px-4 mx-4 ">
+<section class="my-4 py-4 px-4 mx-4 lists">
 <!-- Lists:
 	Title: string
 	SingleLine: boolean (true by default)
@@ -398,7 +410,7 @@
 
 
 <h3>Texfield</h3>
-<section class="my-4 py-4 px-4 mx-4 ">
+<section class="my-4 py-4 px-4 mx-4 textfields">
     <!-- A see Vuetify examples for this basic text input -->
 
     <!-- <Textfield placeHolder="Default text input" />
