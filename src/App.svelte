@@ -178,6 +178,20 @@
           imgSrc: "https://images.artistrunwebsite.com/arwblog/bg_37311453262250.jpg?1453262251",
           shaped: true
         }
+      },
+      {
+        type: "List", props: {
+          items: listItems1
+        }
+      },
+      {
+        type: "Tooltip", props: {
+          slotContent: {
+            type: "Button", props: {
+              btnText: "Tooltip Button"
+            }
+          }
+        }
       }
     ];
 </script>
