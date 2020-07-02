@@ -269,7 +269,11 @@
     
     1) All buttons should have ripple effect when clicked
     
-    3) btnText attribute is where the button's text goes-->
+    2) btnText attribute is where the button's text goes
+
+    3) buttons must also have a clickEvent function attribute
+    which by default is just: export let clickEvent = ()=>{};
+    -->
 
 <h3>Buttons</h3>
 <section class="mx-10 my-10 ">
